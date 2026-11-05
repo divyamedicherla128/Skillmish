@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillmesh — Where Skills Connect. Where People Grow.</title>
+
+    <!-- Google Fonts: Manrope (Headings) and Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet with Brand Identity -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main JavaScript (defer ensures script executes after DOM is ready) -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- ======================================================================
+         1. Navigation Bar
+         ====================================================================== -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <!-- Connected-Mesh Inspired Logo -->
+            <a href="#hero" class="brand-logo" aria-label="Skillmesh Home">
+                <div class="mesh-logo-icon">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Connected Nodes & Mesh Lines -->
+                        <line x1="18" y1="8" x2="8" y2="26" stroke="#6D4AFF" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="18" y1="8" x2="28" y2="26" stroke="#6D4AFF" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="8" y1="26" x2="28" y2="26" stroke="#EDE8FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="18" y1="8" x2="18" y2="20" stroke="#20BFA9" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="8" y1="26" x2="18" y2="20" stroke="#20BFA9" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="28" y1="26" x2="18" y2="20" stroke="#20BFA9" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Mesh Nodes -->
+                        <circle cx="18" cy="8" r="4.5" fill="#6D4AFF"/>
+                        <circle cx="8" cy="26" r="4.5" fill="#20BFA9"/>
+                        <circle cx="28" cy="26" r="4.5" fill="#6D4AFF"/>
+                        <circle cx="18" cy="20" r="3.2" fill="#171A35"/>
+                        <circle cx="18" cy="20" r="1.5" fill="#EDE8FF"/>
+                    </svg>
+                </div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name">Skill<span>mesh</span></div>
+                    <span class="brand-tagline-sub">Peer Skill Exchange</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-desktop">
+                <ul class="nav-links-desktop">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#explore-matches" class="nav-link">Explore Skills</a></li>
+                    <li><a href="#requests-section" class="nav-link">Exchange Requests <span class="nav-badge" id="nav-requests-badge" style="display: none;">0</span></a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#profile-section" class="nav-link">My Profile</a></li>
+                </ul>
+            </nav>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <button type="button" class="btn-nav-login" id="nav-login-btn">Login</button>
+                <a href="#profile-section" class="btn btn-primary btn-sm" id="nav-get-started-btn">Get Started</a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button type="button" class="mobile-nav-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div class="mobile-nav-menu" id="mobile-nav-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-item">Home</a></li>
+                <li><a href="#explore-matches" class="mobile-nav-item">Explore Skills</a></li>
+                <li><a href="#requests-section" class="mobile-nav-item">Exchange Requests</a></li>
+                <li><a href="#how-it-works" class="mobile-nav-item">How It Works</a></li>
+                <li><a href="#profile-section" class="mobile-nav-item">My Profile</a></li>
+            </ul>
+            <div class="mobile-nav-actions">
+                <button type="button" class="btn btn-outline" id="mobile-login-btn">Login</button>
+                <a href="#profile-section" class="btn btn-primary mobile-nav-item">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         2. Hero Section
+         ====================================================================== -->
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left: Hero Text Content -->
+                    <div class="hero-content">
+                        <div class="badge-tag badge-purple hero-badge">
+                            <span>✨</span>
+                            <span>Where Skills Connect. Where People Grow.</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Your Skills Can Take <span class="purple-text">Someone Further.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Share what you know, discover what you want to learn, and grow together.
+                            Skillmesh is the barter-based skill exchange network built exclusively for students.
+                        </p>
+
+                        <!-- Call-To-Action Buttons -->
+                        <div class="hero-btn-group">
+                            <a href="#explore-matches" class="btn btn-primary" id="hero-match-btn">
+                                <span>Find Your Skill Match</span>
+                                <span>→</span>
+                            </a>
+                            <a href="#profile-section" class="btn btn-secondary" id="hero-share-btn">
+                                <span>Share Your Skills</span>
+                            </a>
+                        </div>
+
+                        <!-- Highlights Strip -->
+                        <div class="hero-stats-strip">
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Free Peer Barter</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Direct</span>
+                                <span class="stat-label">1-on-1 Exchanges</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">Skill Domains</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hero Visual Demonstration (Live Barter Mesh Card) -->
+                    <div class="hero-visual">
+                        <div class="exchange-showcase-card">
+                            <div class="showcase-header">
+                                <div class="showcase-title">
+                                    <span class="pulse-indicator"></span>
+                                    <span>Live Skill Exchange Match</span>
+                                </div>
+                                <span class="live-tag">Mutual Fit</span>
+                            </div>
+
+                            <div class="student-exchange-pair">
+                                <!-- Student A Box -->
+                                <div class="exchange-user-box">
+                                    <div class="exchange-avatar avatar-a">AS</div>
+                                    <div class="exchange-info">
+                                        <div class="user-name">Aarav Sharma • CS Sophomore</div>
+                                        <div class="user-trade-row">
+                                            <span class="trade-label">Teaches:</span>
+                                            <span class="trade-chip-teach">Java Core</span>
+                                            <span class="trade-label">Wants:</span>
+                                            <span class="trade-chip-learn">UI/UX Design</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Match Bridge Indicator -->
+                                <div class="match-bridge">
+                                    <span class="sparkle">⚡</span>
+                                    <span>Identified Reciprocal Match</span>
+                                    <span class="sparkle">⚡</span>
+                                </div>
+
+                                <!-- Student B Box -->
+                                <div class="exchange-user-box">
+                                    <div class="exchange-avatar avatar-b">MP</div>
+                                    <div class="exchange-info">
+                                        <div class="user-name">Maya Patel • Design Junior</div>
+                                        <div class="user-trade-row">
+                                            <span class="trade-label">Teaches:</span>
+                                            <span class="trade-chip-teach">UI/UX Design</span>
+                                            <span class="trade-label">Wants:</span>
+                                            <span class="trade-chip-learn">Java Core</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             3. Popular Skill Categories
+             ====================================================================== -->
+        <section class="section section-light" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag badge-purple section-subtitle-tag">Explore Domains</div>
+                    <h2 class="section-title">Popular Skill Categories</h2>
+                    <p class="section-description">
+                        Discover in-demand skills fellow college students are exchanging right now.
+                        Click any category to filter student exchanges.
+                    </p>
+                </div>
+
+                <!-- 6 Category Cards -->
+                <div class="categories-grid" id="categories-grid">
+                    <!-- 1. Programming -->
+                    <div class="category-card" data-category="Programming" tabindex="0">
+                        <div class="category-icon-box">💻</div>
+                        <h3 class="category-title">Programming</h3>
+                        <p class="category-desc">Java, Python, C++, Data Structures &amp; Object-Oriented Principles.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Web Development -->
+                    <div class="category-card" data-category="Web Development" tabindex="0">
+                        <div class="category-icon-box">🌐</div>
+                        <h3 class="category-title">Web Development</h3>
+                        <p class="category-desc">HTML/CSS, JavaScript, Responsive Design, React &amp; Backend APIs.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. UI/UX Design -->
+                    <div class="category-card" data-category="UI/UX Design" tabindex="0">
+                        <div class="category-icon-box">🎨</div>
+                        <h3 class="category-title">UI/UX Design</h3>
+                        <p class="category-desc">Figma, Wireframing, User Journey Mapping &amp; Interactive Prototyping.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Communication -->
+                    <div class="category-card" data-category="Communication" tabindex="0">
+                        <div class="category-icon-box">🗣️</div>
+                        <h3 class="category-title">Communication</h3>
+                        <p class="category-desc">Public Speaking, Technical Pitching, Interview Prep &amp; Storytelling.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Data Science -->
+                    <div class="category-card" data-category="Data Science" tabindex="0">
+                        <div class="category-icon-box">📊</div>
+                        <h3 class="category-title">Data Science</h3>
+                        <p class="category-desc">Python Analytics, SQL Queries, Data Visualization &amp; Machine Learning.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. Graphic Design -->
+                    <div class="category-card" data-category="Graphic Design" tabindex="0">
+                        <div class="category-icon-box">✨</div>
+                        <h3 class="category-title">Graphic Design</h3>
+                        <p class="category-desc">Photoshop, Illustrator, Brand Identity, Vector Art &amp; Social Layouts.</p>
+                        <div class="category-meta">
+                            <span>Explore matches</span>
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Filter Notification Bar -->
+                <div class="category-filter-bar" id="category-filter-bar">
+                    <div class="active-filter-indicator">
+                        <span>Filtered by: <strong id="active-category-name">All Categories</strong></span>
+                        <button type="button" class="btn-clear-filter" id="btn-clear-filter" title="Reset filter">✕</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             4. Smart Skill Matching & Explore Matches Section
+             ====================================================================== -->
+        <section class="section" id="explore-matches">
+            <span id="featured-students" style="display: block; position: relative; top: -90px; visibility: hidden;"></span>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag badge-teal section-subtitle-tag">⚡ Smart Match Engine</div>
+                    <h2 class="section-title">Explore Skills &amp; Find Matches</h2>
+                    <p class="section-description">
+                        Skillmesh compares your strengths and learning targets against fellow students in real-time. Mutual exchange matches are automatically prioritized.
+                    </p>
+                </div>
+
+                <!-- Current User Profile Matching Context Banner -->
+                <div class="matching-context-bar" id="matching-context-bar">
+                    <!-- Populated dynamically by JavaScript -->
+                </div>
+
+                <!-- Search, Filter & Controls Toolbar -->
+                <div class="matches-toolbar">
+                    <div class="search-input-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="match-search-input" class="match-search-input" placeholder="Search students by name, college, or major...">
+                        <button type="button" id="match-search-clear" class="btn-clear-search" style="display: none;" title="Clear search">✕</button>
+                    </div>
+
+                    <div class="filter-controls-wrap">
+                        <!-- Skill Filter Dropdown -->
+                        <div class="filter-select-wrap">
+                            <label for="match-skill-filter" class="filter-label">Filter Skill:</label>
+                            <select id="match-skill-filter" class="match-filter-select">
+                                <option value="all">All Skills</option>
+                                <optgroup label="Programming">
+                                    <option value="Java">Java</option>
+                                    <option value="Python">Python</option>
+                                    <option value="C">C</option>
+                                    <option value="C++">C++</option>
+                                </optgroup>
+                                <optgroup label="Web Development">
+                                    <option value="HTML">HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                </optgroup>
+                                <optgroup label="Design">
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                </optgroup>
+                                <optgroup label="Other">
+                                    <option value="Communication">Communication</option>
+                                    <option value="Public Speaking">Public Speaking</option>
+                                    <option value="Data Science">Data Science</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Mutual Matches Only Filter Checkbox -->
+                        <label class="mutual-toggle-label">
+                            <input type="checkbox" id="match-mutual-only-checkbox">
+                            <span class="mutual-toggle-pill">⚡ Mutual Matches Only</span>
+                        </label>
+
+                        <!-- Reset Button -->
+                        <button type="button" id="match-reset-filters-btn" class="btn btn-outline btn-sm">
+                            Reset Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Filters Notification / Match Count -->
+                <div class="matches-status-strip">
+                    <span id="matches-count-label" class="matches-count-label">Loading students...</span>
+                    <span id="active-skill-filter-badge" class="badge-tag badge-purple" style="display: none;"></span>
+                </div>
+
+                <!-- Dynamic Student Matches Grid -->
+                <div class="students-grid" id="matches-grid">
+                    <!-- Populated dynamically by JavaScript -->
+                </div>
+
+                <!-- Empty State (when search or filter finds no students) -->
+                <div class="no-matches-card" id="no-matches-card" style="display: none;">
+                    <div class="no-matches-icon">🔍</div>
+                    <h3 class="no-matches-title">No Matching Students Found</h3>
+                    <p class="no-matches-desc" id="no-matches-desc">
+                        No students match your current search or filter criteria. Try searching for a different skill or clearing your active filters.
+                    </p>
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-clear-all-filters">
+                        Clear All Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             5. My Exchange Requests Section
+             ====================================================================== -->
+        <section class="section section-light" id="requests-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag badge-purple section-subtitle-tag">Barter Request Center</div>
+                    <h2 class="section-title">My Exchange Requests</h2>
+                    <p class="section-description">
+                        Track sent invitations, review incoming peer barter proposals, and view confirmed skill exchanges.
+                    </p>
+                </div>
+
+                <!-- Local Demonstration Notice & Simulator Banner -->
+                <div class="demo-disclaimer-box">
+                    <div class="disclaimer-content">
+                        <span class="disclaimer-icon">💡</span>
+                        <div class="disclaimer-text">
+                            <strong>Frontend Demonstration Mode:</strong> All requests are saved and managed directly in your browser's <code>LocalStorage</code>.
+                            Simulate incoming requests to test the complete Accept and Reject workflow locally.
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-sm" id="btn-simulate-incoming">
+                        + Simulate Received Request
+                    </button>
+                </div>
+
+                <!-- Request Management Tabs -->
+                <div class="request-tabs-nav" role="tablist">
+                    <button type="button" class="request-tab-btn active" id="tab-btn-sent" role="tab" aria-selected="true" data-tab="sent">
+                        <span>Sent Requests</span>
+                        <span class="tab-count-badge" id="badge-sent-count">0</span>
+                    </button>
+                    <button type="button" class="request-tab-btn" id="tab-btn-received" role="tab" aria-selected="false" data-tab="received">
+                        <span>Received Requests</span>
+                        <span class="tab-count-badge" id="badge-received-count">0</span>
+                    </button>
+                    <button type="button" class="request-tab-btn" id="tab-btn-accepted" role="tab" aria-selected="false" data-tab="accepted">
+                        <span>Accepted Exchanges</span>
+                        <span class="tab-count-badge" id="badge-accepted-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Tab Panels Container -->
+                <div class="request-tabs-content">
+                    <!-- Tab Panel 1: Sent Requests -->
+                    <div class="request-tab-panel active" id="panel-sent-requests" role="tabpanel">
+                        <div class="requests-grid" id="sent-requests-list">
+                            <!-- Populated dynamically by JavaScript -->
+                        </div>
+                        <div class="requests-empty-state" id="sent-empty-state" style="display: none;">
+                            <div class="empty-requests-icon">📤</div>
+                            <h4>No Sent Requests Yet</h4>
+                            <p>Browse mutual matches in the Explore Skills section above and click "Send Exchange Request" to propose a barter.</p>
+                            <a href="#explore-matches" class="btn btn-outline btn-sm">Find Mutual Matches</a>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 2: Received Requests -->
+                    <div class="request-tab-panel" id="panel-received-requests" role="tabpanel" style="display: none;">
+                        <div class="requests-grid" id="received-requests-list">
+                            <!-- Populated dynamically by JavaScript -->
+                        </div>
+                        <div class="requests-empty-state" id="received-empty-state" style="display: none;">
+                            <div class="empty-requests-icon">📥</div>
+                            <h4>No Incoming Requests</h4>
+                            <p>You have no pending requests from peers. Use the "Simulate Received Request" button above to test the approval flow!</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 3: Accepted Exchanges -->
+                    <div class="request-tab-panel" id="panel-accepted-requests" role="tabpanel" style="display: none;">
+                        <div class="requests-grid" id="accepted-requests-list">
+                            <!-- Populated dynamically by JavaScript -->
+                        </div>
+                        <div class="requests-empty-state" id="accepted-empty-state" style="display: none;">
+                            <div class="empty-requests-icon">🤝</div>
+                            <h4>No Confirmed Exchanges Yet</h4>
+                            <p>When you accept an incoming request or a peer accepts your sent request, your active barter exchange partnership will appear here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             6. How It Works Section
+             ====================================================================== -->
+        <section class="section section-light" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag badge-purple section-subtitle-tag">Simple Process</div>
+                    <h2 class="section-title">How Skillmesh Works</h2>
+                    <p class="section-description">
+                        Four straightforward steps to trade knowledge and accelerate your personal growth.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-number-badge">1</div>
+                        <h3 class="step-title">Create your profile.</h3>
+                        <p class="step-desc">
+                            Sign up using your college email. Outline your academic focus, interests, and availability for study sessions.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-number-badge">2</div>
+                        <h3 class="step-title">Add skills you can teach.</h3>
+                        <p class="step-desc">
+                            List the topics you feel confident sharing—whether it's Java syntax, Figma layouts, or statistics.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-number-badge">3</div>
+                        <h3 class="step-title">Choose skills you want to learn.</h3>
+                        <p class="step-desc">
+                            Select the subjects or technologies you want to master. No tuition fees or commercial subscriptions required.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-number-badge">4</div>
+                        <h3 class="step-title">Connect with matching students.</h3>
+                        <p class="step-desc">
+                            Skillmesh identifies mutual matches where your strengths align with another student's learning targets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             6. Student Profile Creation & Management
+             ====================================================================== -->
+        <section class="section" id="profile-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag badge-purple section-subtitle-tag">Student Onboarding</div>
+                    <h2 class="section-title">Create Your Skillmesh Profile</h2>
+                    <p class="section-description">
+                        Join your campus peer network. Outline what you can teach and what you want to learn to connect for free skill exchanges.
+                    </p>
+                </div>
+
+                <div class="profile-layout-grid">
+                    <!-- Column 1: Student Profile Form -->
+                    <div class="profile-form-column">
+                        <div class="profile-card-box">
+                            <div class="profile-form-header">
+                                <h3 class="profile-form-title" id="form-header-title">Student Registration Form</h3>
+                                <p class="profile-form-subtitle">Fill in your academic details and select your skill exchange preferences.</p>
+                            </div>
+
+                            <!-- Inline Alerts (Error & Success) -->
+                            <div id="profile-form-error" class="form-alert form-alert-error" style="display: none;" role="alert"></div>
+                            <div id="profile-form-success" class="form-alert form-alert-success" style="display: none;" role="alert"></div>
+
+                            <form id="student-profile-form" novalidate>
+                                <!-- Personal & Academic Details -->
+                                <div class="form-row-2">
+                                    <div class="form-group">
+                                        <label for="profile-name">Full Name <span class="required-star">*</span></label>
+                                        <input type="text" id="profile-name" class="form-control" placeholder="e.g. Aarav Sharma" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-college">College / University <span class="required-star">*</span></label>
+                                        <input type="text" id="profile-college" class="form-control" placeholder="e.g. National Institute of Technology" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row-2">
+                                    <div class="form-group">
+                                        <label for="profile-branch">Branch / Major <span class="required-star">*</span></label>
+                                        <input type="text" id="profile-branch" class="form-control" placeholder="e.g. Computer Science &amp; Engineering" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-year">Year of Study <span class="required-star">*</span></label>
+                                        <select id="profile-year" class="form-control" required>
+                                            <option value="" disabled selected>Select Year of Study</option>
+                                            <option value="1st Year">1st Year (Freshman)</option>
+                                            <option value="2nd Year">2nd Year (Sophomore)</option>
+                                            <option value="3rd Year">3rd Year (Junior)</option>
+                                            <option value="4th Year">4th Year (Senior)</option>
+                                            <option value="Postgraduate">Postgraduate / Masters</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profile-bio">Short Introduction</label>
+                                    <textarea id="profile-bio" class="form-control form-textarea" rows="3" placeholder="Tell fellow students about your goals, learning style, and study availability (Max 250 characters)."></textarea>
+                                </div>
+
+                                <!-- Skills I Can Teach -->
+                                <div class="skill-selection-section teach-selection-box">
+                                    <div class="skill-selection-header">
+                                        <div class="skill-title-wrap">
+                                            <span class="skill-type-icon teach-icon">🎓</span>
+                                            <h4 class="skill-selection-title">Skills I Can Teach <span class="required-star">*</span></h4>
+                                        </div>
+                                        <span class="skill-selection-hint">Select the skills you can teach fellow peers (Growth Teal)</span>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Programming</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item teach-tag" data-skill="Java">
+                                                <input type="checkbox" name="skillsTeach" value="Java">
+                                                <span class="skill-tag-pill">Java</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="Python">
+                                                <input type="checkbox" name="skillsTeach" value="Python">
+                                                <span class="skill-tag-pill">Python</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="C">
+                                                <input type="checkbox" name="skillsTeach" value="C">
+                                                <span class="skill-tag-pill">C</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="C++">
+                                                <input type="checkbox" name="skillsTeach" value="C++">
+                                                <span class="skill-tag-pill">C++</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Web Development</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item teach-tag" data-skill="HTML">
+                                                <input type="checkbox" name="skillsTeach" value="HTML">
+                                                <span class="skill-tag-pill">HTML</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="CSS">
+                                                <input type="checkbox" name="skillsTeach" value="CSS">
+                                                <span class="skill-tag-pill">CSS</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="JavaScript">
+                                                <input type="checkbox" name="skillsTeach" value="JavaScript">
+                                                <span class="skill-tag-pill">JavaScript</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Design</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item teach-tag" data-skill="UI/UX Design">
+                                                <input type="checkbox" name="skillsTeach" value="UI/UX Design">
+                                                <span class="skill-tag-pill">UI/UX Design</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="Graphic Design">
+                                                <input type="checkbox" name="skillsTeach" value="Graphic Design">
+                                                <span class="skill-tag-pill">Graphic Design</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Other</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item teach-tag" data-skill="Communication">
+                                                <input type="checkbox" name="skillsTeach" value="Communication">
+                                                <span class="skill-tag-pill">Communication</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="Public Speaking">
+                                                <input type="checkbox" name="skillsTeach" value="Public Speaking">
+                                                <span class="skill-tag-pill">Public Speaking</span>
+                                            </label>
+                                            <label class="skill-tag-item teach-tag" data-skill="Data Science">
+                                                <input type="checkbox" name="skillsTeach" value="Data Science">
+                                                <span class="skill-tag-pill">Data Science</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skills I Want to Learn -->
+                                <div class="skill-selection-section learn-selection-box">
+                                    <div class="skill-selection-header">
+                                        <div class="skill-title-wrap">
+                                            <span class="skill-type-icon learn-icon">🎯</span>
+                                            <h4 class="skill-selection-title">Skills I Want to Learn <span class="required-star">*</span></h4>
+                                        </div>
+                                        <span class="skill-selection-hint">Choose the skills you want to learn in exchange (Soft Lavender)</span>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Programming</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item learn-tag" data-skill="Java">
+                                                <input type="checkbox" name="skillsLearn" value="Java">
+                                                <span class="skill-tag-pill">Java</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="Python">
+                                                <input type="checkbox" name="skillsLearn" value="Python">
+                                                <span class="skill-tag-pill">Python</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="C">
+                                                <input type="checkbox" name="skillsLearn" value="C">
+                                                <span class="skill-tag-pill">C</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="C++">
+                                                <input type="checkbox" name="skillsLearn" value="C++">
+                                                <span class="skill-tag-pill">C++</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Web Development</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item learn-tag" data-skill="HTML">
+                                                <input type="checkbox" name="skillsLearn" value="HTML">
+                                                <span class="skill-tag-pill">HTML</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="CSS">
+                                                <input type="checkbox" name="skillsLearn" value="CSS">
+                                                <span class="skill-tag-pill">CSS</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="JavaScript">
+                                                <input type="checkbox" name="skillsLearn" value="JavaScript">
+                                                <span class="skill-tag-pill">JavaScript</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Design</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item learn-tag" data-skill="UI/UX Design">
+                                                <input type="checkbox" name="skillsLearn" value="UI/UX Design">
+                                                <span class="skill-tag-pill">UI/UX Design</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="Graphic Design">
+                                                <input type="checkbox" name="skillsLearn" value="Graphic Design">
+                                                <span class="skill-tag-pill">Graphic Design</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-domain-group">
+                                        <span class="domain-title">Other</span>
+                                        <div class="skill-tags-grid">
+                                            <label class="skill-tag-item learn-tag" data-skill="Communication">
+                                                <input type="checkbox" name="skillsLearn" value="Communication">
+                                                <span class="skill-tag-pill">Communication</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="Public Speaking">
+                                                <input type="checkbox" name="skillsLearn" value="Public Speaking">
+                                                <span class="skill-tag-pill">Public Speaking</span>
+                                            </label>
+                                            <label class="skill-tag-item learn-tag" data-skill="Data Science">
+                                                <input type="checkbox" name="skillsLearn" value="Data Science">
+                                                <span class="skill-tag-pill">Data Science</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Conflict Prevention Note -->
+                                <div class="conflict-helper-box">
+                                    <span class="info-bulb">💡</span>
+                                    <span><strong>Conflict Prevention:</strong> A skill selected in "Can Teach" is automatically locked in "Want to Learn" and vice-versa, ensuring a valid reciprocal exchange.</span>
+                                </div>
+
+                                <!-- Form Submit & Reset Buttons -->
+                                <div class="profile-form-actions">
+                                    <button type="submit" class="btn btn-primary" id="profile-submit-btn">
+                                        Save Profile
+                                    </button>
+                                    <button type="button" class="btn btn-outline" id="profile-reset-btn">
+                                        Reset Form
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Saved Profile Display / Empty State Preview -->
+                    <div class="profile-display-column">
+                        <!-- Card when profile is saved in LocalStorage -->
+                        <div class="saved-profile-card" id="saved-profile-card" style="display: none;">
+                            <div class="saved-card-badge-row">
+                                <span class="badge-tag badge-teal">✓ Profile Active</span>
+                                <span class="saved-timestamp" id="profile-saved-timestamp"></span>
+                            </div>
+
+                            <div class="saved-card-header">
+                                <div class="saved-card-avatar" id="saved-card-avatar">AS</div>
+                                <div class="saved-card-user-info">
+                                    <h3 class="saved-card-name" id="saved-card-name">Aarav Sharma</h3>
+                                    <p class="saved-card-college" id="saved-card-college">National Institute of Technology</p>
+                                    <div class="saved-card-tags">
+                                        <span class="tag-branch" id="saved-card-branch">Computer Science</span>
+                                        <span class="tag-year" id="saved-card-year">2nd Year</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="saved-card-bio" id="saved-card-bio-wrap">
+                                <p id="saved-card-bio">"Enthusiastic about web development and sharing core algorithms."</p>
+                            </div>
+
+                            <!-- Skills Display -->
+                            <div class="saved-card-skills-block">
+                                <h4 class="saved-skills-title teach-title">
+                                    <span>🎓</span> Skills I Can Teach
+                                </h4>
+                                <div class="skills-pill-wrap" id="saved-card-teach-skills">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <div class="saved-card-skills-block">
+                                <h4 class="saved-skills-title learn-title">
+                                    <span>🎯</span> Skills I Want to Learn
+                                </h4>
+                                <div class="skills-pill-wrap" id="saved-card-learn-skills">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <div class="saved-card-actions">
+                                <button type="button" class="btn btn-secondary btn-sm" id="btn-edit-profile">
+                                    ✏️ Edit Profile
+                                </button>
+                                <button type="button" class="btn btn-outline btn-sm" id="btn-delete-profile">
+                                    🗑️ Clear Profile
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Empty State Card (When no profile is saved yet) -->
+                        <div class="empty-profile-card" id="empty-profile-card">
+                            <div class="empty-icon-wrap">📋</div>
+                            <h3 class="empty-title">Your Profile Preview</h3>
+                            <p class="empty-desc">
+                                Fill out the registration form on the left. Once saved, your live student exchange card will appear here and persist in your browser's LocalStorage.
+                            </p>
+                            <div class="empty-features-list">
+                                <div class="empty-feature-item">
+                                    <span class="empty-check">✓</span>
+                                    <span>Zero tuition or hidden fees</span>
+                                </div>
+                                <div class="empty-feature-item">
+                                    <span class="empty-check">✓</span>
+                                    <span>Browser LocalStorage persistence</span>
+                                </div>
+                                <div class="empty-feature-item">
+                                    <span class="empty-check">✓</span>
+                                    <span>Editable anytime without losing data</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             7. System Status & Verification (Preserved from Phase 1)
+             ====================================================================== -->
+        <section class="system-check-section" id="system-status">
+            <div class="container">
+                <div class="setup-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Project Setup &amp; Storage Verification</h3>
+                        <span class="status-pill">Active &amp; Ready</span>
+                    </div>
+                    <ul class="checklist">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>index.html:</strong> Semantic HTML5 markup loaded</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>css/style.css:</strong> Purple theme &amp; responsive layouts</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>js/script.js:</strong> Vanilla JavaScript interactions</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span><strong>assets/:</strong> Static directory ready</span>
+                        </li>
+                    </ul>
+                    <div class="action-area">
+                        <button type="button" id="test-btn" class="btn btn-outline btn-sm">Test LocalStorage Connection</button>
+                        <p id="status-feedback" class="status-feedback">Click above to verify Browser LocalStorage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             7. Final Call-to-Action (CTA) Section
+             ====================================================================== -->
+        <section class="cta-section" id="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="cta-tag">Join The Student Network</span>
+                    <h2 class="cta-title">Where Skills Connect.<br>Where People Grow.</h2>
+                    <p class="cta-desc">
+                        Stop struggling through online tutorials alone. Join fellow students today, exchange what you know,
+                        and build real-world skills together without spending a dime.
+                    </p>
+                    <div class="cta-btn-group">
+                        <a href="#profile-section" class="btn btn-white" id="cta-get-started-btn">Get Started Now</a>
+                        <a href="#categories" class="btn btn-outline btn-white-border">Explore Skills</a>
+                    </div>
+                    <div class="cta-assurance">
+                        <span>✓ 100% Free Peer Learning</span>
+                        <span>✓ Zero Subscriptions</span>
+                        <span>✓ Built For Students</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================================================
+         8. Footer
+         ====================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="mesh-logo-icon">
+                            <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="18" y1="8" x2="8" y2="26" stroke="#EDE8FF" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="18" y1="8" x2="28" y2="26" stroke="#EDE8FF" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="8" y1="26" x2="28" y2="26" stroke="#6D4AFF" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="18" y1="8" x2="18" y2="20" stroke="#20BFA9" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="18" cy="8" r="4" fill="#6D4AFF"/>
+                                <circle cx="8" cy="26" r="4" fill="#20BFA9"/>
+                                <circle cx="28" cy="26" r="4" fill="#6D4AFF"/>
+                                <circle cx="18" cy="20" r="2.5" fill="#EDE8FF"/>
+                            </svg>
+                        </div>
+                        <div class="brand-name">Skill<span>mesh</span></div>
+                    </div>
+                    <p class="footer-tagline">
+                        Where Skills Connect. Where People Grow.<br>
+                        A collaborative barter platform for college learners.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#explore-matches">Explore Matches</a></li>
+                        <li><a href="#requests-section">Exchange Requests</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#profile-section">My Profile</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#categories">Programming</a></li>
+                        <li><a href="#categories">UI/UX Design</a></li>
+                        <li><a href="#categories">Web Development</a></li>
+                        <li><a href="#categories">Data Science</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#how-it-works">Guidelines</a></li>
+                        <li><a href="#system-status">System Status</a></li>
+                        <li><a href="#cta-section">Join Skillmesh</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Skillmesh. Where Skills Connect. Where People Grow. All rights reserved.</p>
+                <p>Designed for peer-to-peer student education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================================
+         9. Interactive Modal (Login / Sign Up Demo)
+         ====================================================================== -->
+    <div class="modal-overlay" id="auth-modal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Welcome to Skillmesh</h3>
+                <p class="modal-subtitle" id="modal-subtitle">Connect with fellow students to exchange skills.</p>
+            </div>
+            <form class="modal-form" id="auth-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="auth-email">College Email (.edu / student email)</label>
+                    <input type="email" id="auth-email" class="form-input" placeholder="student@college.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="auth-skill-teach">What can you teach? (e.g. Java, Figma)</label>
+                    <input type="text" id="auth-skill-teach" class="form-input" placeholder="e.g. Java, UI/UX Design">
+                </div>
+                <button type="submit" class="btn btn-primary" id="modal-submit-btn" style="width: 100%; margin-top: 0.5rem;">
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+</body>
+</html>
